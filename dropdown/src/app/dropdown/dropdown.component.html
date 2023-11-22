@@ -1,0 +1,36 @@
+<div class="grid">
+     <div class= "flex align-items-center justify-content-center">
+          <div class="p-fluid">
+               <div [formGroup]="creatForm">
+                    <div class="mb-3">
+                         <input type="text" pInputText formControlName="name" placeholder="username" />
+                    </div>
+                    <div class="mb-3">
+
+                         <p-dropdown [options]="filterFruits" optionLabel="price" optionValue="price"
+                              formControlName="price" [disabled]="isDropdownDisabled" placeholder="select"></p-dropdown>
+                    </div>
+                    <div class="mb-3">
+
+                         <p-dropdown [options]="filterFruits" optionLabel="color" optionValue="color"
+                              formControlName="color" [disabled]="isDropdownDisabled" placeholder="select"></p-dropdown>
+                    </div>
+                    <div class="mb-3">
+
+                         <p-dropdown [options]="filterFruits" optionLabel="name" optionValue="color"
+                              formControlName="name" [disabled]="isDropdownDisabled" placeholder="select"></p-dropdown>
+                    </div>
+                    <div  class= "mb-3">
+                         <label for=""  class="mr-3">Gender</label>
+                         <p-radioButton label="male" formControlName="male" class="mr-3 field-checkbox" ></p-radioButton>
+                         <p-radioButton label="female" formControlName="female" class="mr-3 field-checkbox"></p-radioButton>
+                    </div>
+                    
+                   <div class="mb-3">
+                         <p-button label="Submit" (onClick)="submittedValues()"></p-button>
+                  </div>
+
+               </div>
+          </div>
+     </div>
+</div>
